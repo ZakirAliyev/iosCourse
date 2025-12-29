@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var i: Int = 0
+    var str: String = ""
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack(alignment: .leading, spacing: 50, content: greetings)
+    }
+    
+    @ViewBuilder
+    func greetings() -> some View {
+        Image(systemName: "globe")
+        Text("Greetings, Zakir Aliyev!")
+        if true {
+            Text("Greetings, Zakir Aliyev!")
         }
-        .padding()
+        Circle()
     }
 }
 
